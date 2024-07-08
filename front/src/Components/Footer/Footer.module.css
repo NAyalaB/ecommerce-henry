@@ -1,0 +1,9 @@
+.footer {
+    left: 0;
+    bottom: 0;
+     width: 100%;
+    background-color: #F5F5F5; 
+    text-align: center; /* Alinear el texto al centro */
+    padding: 20px 0; /* Espaciado interno del footer */
+  }
+  
