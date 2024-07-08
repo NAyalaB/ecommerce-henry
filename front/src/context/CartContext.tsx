@@ -23,7 +23,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
-    console.log("storedCart from localStorage:", storedCart);
+  
     if (Array.isArray(storedCart) && storedCart.length > 0) {
       let totalCart = 0;
       storedCart.forEach((item: IOrder) => {
@@ -31,7 +31,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
           totalCart += item.products[0].price;
         }
       });
-      console.log("totalCart calculated:", totalCart);
+  
       setCart(storedCart);
       setTotal(totalCart);
 
@@ -41,14 +41,14 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    // Recalculate total whenever cart changes
+  
     let totalCart = 0;
     cart.forEach((item: IOrder) => {
       if (item.products && item.products.length > 0) {
         totalCart += item.products[0].price;
       }
     });
-    console.log("totalCart recalculated:", totalCart);
+ 
     setTotal(totalCart);
   }, [cart]);
 

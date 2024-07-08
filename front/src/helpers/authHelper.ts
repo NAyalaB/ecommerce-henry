@@ -9,7 +9,8 @@ export async function register(userData: IRegisterProps) {
     try {
         const res = await fetch (`${apiUrl}/users/register`,{
             method: 'POST',
-            headers: { 'Content-Type': 'application/json'
+            headers: { 'Content-Type': 'application/json',
+                'ngrok-skip-browser-warning':'true',    
             },
             body: JSON.stringify(userData)
 
@@ -30,7 +31,8 @@ export async function login(userData: ILoginProps) {
     try {
         const res = await fetch (`${apiUrl}/users/login`,{
             method: 'POST',
-            headers: { 'Content-Type': 'application/json'
+            headers: { 'Content-Type': 'application/json',
+                'ngrok-skip-browser-warning':'true',   
             },
             body: JSON.stringify(userData)
 

@@ -7,6 +7,7 @@ export async function createOrder(products: number[], token: string) {
       headers: {
         "content-type": "application/json",
         Authorization: token,
+        'ngrok-skip-browser-warning':'true',   
       },
       body: JSON.stringify({
         products,
@@ -23,6 +24,7 @@ export async function getOrders(token: string) {
       method: "GET",
       headers: {
         Authorization: token,
+        'ngrok-skip-browser-warning':'true',   
       }
     })
     const orders = await res.json();
@@ -32,23 +34,4 @@ export async function getOrders(token: string) {
   }
 }
 
-/* export async function getOrders(token: string) {
-    try {
-        const res = await fetch(`${apiUrl}/orders`, {
-            method: 'GET',
-            headers: {
-                Authorization: token,
-            }
-        });
 
-        if (!res.ok) {
-            const errorData = await res.text();
-            throw new Error(`Error ${res.status}: ${errorData}`);
-        }
-
-        const orders = await res.json();
-        return orders;
-    } catch (error: any) {
-        throw new Error(error.message);
-    }
-} */

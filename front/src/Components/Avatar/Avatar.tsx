@@ -7,7 +7,7 @@ import React from "react";
 const ImagenAvatar= () => {
     
     const { userData } = useAuth();
-    console.log(userData, "userDataaaaaaaa"); 
+   
 
     return (
       

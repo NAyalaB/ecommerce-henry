@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 interface BotonLogueoProps {
   ariaLabel: string;
-  children: ReactNode; // Define children como ReactNode
+  children: ReactNode; 
 }
 
 const BotonLogueo: React.FC<BotonLogueoProps> = ({ ariaLabel, children }) => {

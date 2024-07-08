@@ -19,7 +19,7 @@ const DashboardData = () => {
        Dirección: {userData?.user.address}
           </p>
       <p className="font-normal text-gray-700 dark:text-gray-400">
-       Telefono: {userData?.user.address}
+       Telefono: {userData?.user.phone}
       </p>
       <p className="font-normal text-gray-700 dark:text-gray-400">
         E-mail: {userData?.user.email}
